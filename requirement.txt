@@ -12,3 +12,4 @@ profanity_check===1.0.3
 wordcloud===1.8.2.2
 transformers===4.27.1
 sentence-transformers===2.2.2
+textatistic===0.0.1
