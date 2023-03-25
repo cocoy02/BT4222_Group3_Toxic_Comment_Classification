@@ -23,6 +23,17 @@ from textatistic import Textatistic
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 # for word embeddings
 import gensim
+# for evaluation
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import log_loss
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_absolute_error
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import confusion_matrix
 
 
 '''
@@ -434,3 +445,45 @@ def get_glove_embedding(data):
     embeddings_glove = data["text_tokenized_nopunc"].map(lambda x: get_embeddings(glove_model, x, 200))
     
     return embeddings_glove
+
+
+'''
+Evalution
+'''
+#Define helper function to have scores of different evaluation methods
+def get_evaluation_score(y_true, y_pred, y_pred_prob):
+    #accuracy
+    print('Accuracy score: ', accuracy_score(y_true, y_pred))
+    #precision
+    print('Precision score: ', precision_score(y_true, y_pred, average="weighted"))
+    #recall
+    print('Recall score: ', recall_score(y_true, y_pred, average="weighted"))
+    #f1
+    print('F1 score: ', f1_score(y_true, y_pred, average="weighted"))
+    
+    #confusion matrix
+    labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
+
+    conf_mat_dict={}
+
+    for label_col in range(len(labels)):
+        y_true_label = y_true[:, label_col]
+        y_pred_label = y_pred[:, label_col]
+        conf_mat_dict[labels[label_col]] = confusion_matrix(y_pred=y_pred_label, y_true=y_true_label)
+
+
+    for label, matrix in conf_mat_dict.items():
+        print("Confusion matrix for label {}:".format(label))
+        print(matrix)
+    #log loss
+    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    #mean squared error
+    print('Mean squared error: ', mean_squared_error(y_true, y_pred))
+    #mean absolute error
+    print('Mean absolute error: ', mean_absolute_error(y_true, y_pred))
+
+#define helper function to get cross valuation score
+def get_cross_val_score(model, x_data, y_data, score):
+    print('Mean absolute error: ', cross_val_score(model, x_data, y_data, scoring=score, cv=5))
+
+
