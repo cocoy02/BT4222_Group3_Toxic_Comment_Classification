@@ -451,7 +451,7 @@ def get_glove_embedding(data):
 '''
 Evalution
 '''
-#Define helper function to have scores of different evaluation methods
+# define a helper function to have scores of different evaluation methods
 def get_evaluation_score(y_true, y_pred, y_pred_prob):
     #accuracy
     print('Accuracy score: ', accuracy_score(y_true, y_pred))
@@ -485,8 +485,27 @@ def get_evaluation_score(y_true, y_pred, y_pred_prob):
     # AUC score
     print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob.toarray(), average="weighted"))
 
-#define helper function to get cross valuation score
+# define helper function to get cross valuation score
 def get_cross_val_score(model, x_data, y_data, score):
     print('Mean absolute error: ', cross_val_score(model, x_data, y_data, scoring=score, cv=5))
 
-
+# define a helper function to have evaluation scores of single class models
+def get_evaluation_score_single_class(y_true, y_pred, y_pred_prob):
+    #accuracy
+    print('Accuracy score: ', accuracy_score(y_true, y_pred))
+    #precision
+    print('Precision score: ', precision_score(y_true, y_pred))
+    #recall
+    print('Recall score: ', recall_score(y_true, y_pred))
+    #f1
+    print('F1 score: ', f1_score(y_true, y_pred))
+    
+    #confusion matrix
+    print("Confusion matrix:")
+    print(confusion_matrix(y_pred=y_pred, y_true=y_true))
+    
+    #log loss
+    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    
+    # AUC score
+    print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob))
