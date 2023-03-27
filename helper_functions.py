@@ -34,6 +34,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import roc_auc_score
 
 
 '''
@@ -462,29 +463,53 @@ def get_evaluation_score(y_true, y_pred, y_pred_prob=None):
     print('F1 score: ', f1_score(y_true, y_pred, average="weighted"))
     
     #confusion matrix
-    # labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
+    labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
 
-    # conf_mat_dict={}
+    conf_mat_dict={}
 
-    # for label_col in range(len(labels)):
-    #     y_true_label = y_true[:, label_col]
-    #     y_pred_label = y_pred[:, label_col]
-    #     conf_mat_dict[labels[label_col]] = confusion_matrix(y_pred=y_pred_label, y_true=y_true_label)
+    for label_col in range(len(labels)):
+        y_true_label = y_true[:, label_col]
+        y_pred_label = y_pred[:, label_col]
+        conf_mat_dict[labels[label_col]] = confusion_matrix(y_pred=y_pred_label, y_true=y_true_label)
 
 
-    # for label, matrix in conf_mat_dict.items():
-    #     print("Confusion matrix for label {}:".format(label))
-    #     print(matrix)
+    for label, matrix in conf_mat_dict.items():
+        print("Confusion matrix for label {}:".format(label))
+        print(matrix)
     #log loss
-    if y_pred_prob!=None:
-        print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
-    #mean squared error
-    print('Mean squared error: ', mean_squared_error(y_true, y_pred))
-    #mean absolute error
-    print('Mean absolute error: ', mean_absolute_error(y_true, y_pred))
 
-#define helper function to get cross valuation score
+    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    #mean squared error
+    #print('Mean squared error: ', mean_squared_error(y_true, y_pred.toarray()))
+    #mean absolute error
+    #print('Mean absolute error: ', mean_absolute_error(y_true, y_pred.toarray()))
+    # AUC score
+    if type(y_pred_prob) == np.ndarray:
+        print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob, average="weighted"))
+    else:
+        print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob.toarray(), average="weighted"))
+
+# define helper function to get cross valuation score
 def get_cross_val_score(model, x_data, y_data, score):
     print('Mean absolute error: ', cross_val_score(model, x_data, y_data, scoring=score, cv=5))
 
-
+# define a helper function to have evaluation scores of single class models
+def get_evaluation_score_single_class(y_true, y_pred, y_pred_prob):
+    #accuracy
+    print('Accuracy score: ', accuracy_score(y_true, y_pred))
+    #precision
+    print('Precision score: ', precision_score(y_true, y_pred))
+    #recall
+    print('Recall score: ', recall_score(y_true, y_pred))
+    #f1
+    print('F1 score: ', f1_score(y_true, y_pred))
+    
+    #confusion matrix
+    print("Confusion matrix:")
+    print(confusion_matrix(y_pred=y_pred, y_true=y_true))
+    
+    #log loss
+    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    
+    # AUC score
+    print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob))
