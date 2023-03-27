@@ -451,7 +451,7 @@ def get_glove_embedding(data):
 Evalution
 '''
 #Define helper function to have scores of different evaluation methods
-def get_evaluation_score(y_true, y_pred, y_pred_prob):
+def get_evaluation_score(y_true, y_pred, y_pred_prob=None):
     #accuracy
     print('Accuracy score: ', accuracy_score(y_true, y_pred))
     #precision
@@ -462,21 +462,22 @@ def get_evaluation_score(y_true, y_pred, y_pred_prob):
     print('F1 score: ', f1_score(y_true, y_pred, average="weighted"))
     
     #confusion matrix
-    labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
+    # labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
 
-    conf_mat_dict={}
+    # conf_mat_dict={}
 
-    for label_col in range(len(labels)):
-        y_true_label = y_true[:, label_col]
-        y_pred_label = y_pred[:, label_col]
-        conf_mat_dict[labels[label_col]] = confusion_matrix(y_pred=y_pred_label, y_true=y_true_label)
+    # for label_col in range(len(labels)):
+    #     y_true_label = y_true[:, label_col]
+    #     y_pred_label = y_pred[:, label_col]
+    #     conf_mat_dict[labels[label_col]] = confusion_matrix(y_pred=y_pred_label, y_true=y_true_label)
 
 
-    for label, matrix in conf_mat_dict.items():
-        print("Confusion matrix for label {}:".format(label))
-        print(matrix)
+    # for label, matrix in conf_mat_dict.items():
+    #     print("Confusion matrix for label {}:".format(label))
+    #     print(matrix)
     #log loss
-    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    if y_pred_prob!=None:
+        print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
     #mean squared error
     print('Mean squared error: ', mean_squared_error(y_true, y_pred))
     #mean absolute error
