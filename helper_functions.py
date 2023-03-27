@@ -477,13 +477,19 @@ def get_evaluation_score(y_true, y_pred, y_pred_prob):
         print("Confusion matrix for label {}:".format(label))
         print(matrix)
     #log loss
-    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob.toarray()))
+    if type(y_pred_prob) == np.ndarray:
+        print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    else:
+        print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob.toarray()))
     #mean squared error
     #print('Mean squared error: ', mean_squared_error(y_true, y_pred.toarray()))
     #mean absolute error
     #print('Mean absolute error: ', mean_absolute_error(y_true, y_pred.toarray()))
     # AUC score
-    print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob.toarray(), average="weighted"))
+    if type(y_pred_prob) == np.ndarray:
+        print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob, average="weighted"))
+    else:
+        print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob.toarray(), average="weighted"))
 
 # define helper function to get cross valuation score
 def get_cross_val_score(model, x_data, y_data, score):
