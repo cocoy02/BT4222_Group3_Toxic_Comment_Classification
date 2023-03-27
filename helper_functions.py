@@ -451,8 +451,8 @@ def get_glove_embedding(data):
 '''
 Evalution
 '''
-#Define helper function to have scores of different evaluation methods
-def get_evaluation_score(y_true, y_pred, y_pred_prob=None):
+# define a helper function to have scores of different evaluation methods
+def get_evaluation_score(y_true, y_pred, y_pred_prob):
     #accuracy
     print('Accuracy score: ', accuracy_score(y_true, y_pred))
     #precision
@@ -468,8 +468,8 @@ def get_evaluation_score(y_true, y_pred, y_pred_prob=None):
     conf_mat_dict={}
 
     for label_col in range(len(labels)):
-        y_true_label = y_true[:, label_col]
-        y_pred_label = y_pred[:, label_col]
+        y_true_label = y_true[labels[label_col]]
+        y_pred_label = y_pred[:, label_col].toarray()
         conf_mat_dict[labels[label_col]] = confusion_matrix(y_pred=y_pred_label, y_true=y_true_label)
 
 
@@ -477,8 +477,10 @@ def get_evaluation_score(y_true, y_pred, y_pred_prob=None):
         print("Confusion matrix for label {}:".format(label))
         print(matrix)
     #log loss
-
-    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    if type(y_pred_prob) == np.ndarray:
+        print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    else:
+        print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob.toarray()))
     #mean squared error
     #print('Mean squared error: ', mean_squared_error(y_true, y_pred.toarray()))
     #mean absolute error
