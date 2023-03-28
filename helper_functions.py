@@ -515,3 +515,14 @@ def get_evaluation_score_single_class(y_true, y_pred, y_pred_prob):
     
     # AUC score
     print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob))
+
+# define a helper function to calculate overall accuracy, precision, reall and f1
+def get_overall_evaluation_score(y_true, y_pred):
+    #accuracy
+    print('Accuracy score: ', accuracy_score(y_true, y_pred))
+    #precision
+    print('Precision score: ', precision_score(y_true, y_pred, average="weighted"))
+    #recall
+    print('Recall score: ', recall_score(y_true, y_pred, average="weighted"))
+    #f1
+    print('F1 score: ', f1_score(y_true, y_pred, average="weighted"))
