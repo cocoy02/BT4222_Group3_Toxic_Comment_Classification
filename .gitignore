@@ -1,2 +1,5 @@
 
 .DS_Store
+.ipynb_checkpoints/Gradient Boosting & Naive Bayes-checkpoint.ipynb
+Data/selected_train.csv
+Data/train_oversampled.csv
