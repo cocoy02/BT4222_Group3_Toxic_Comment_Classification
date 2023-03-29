@@ -493,7 +493,7 @@ def get_evaluation_score(y_true, y_pred, y_pred_prob):
 
 # define helper function to get cross valuation score
 def get_cross_val_score(model, x_data, y_data, score):
-    print('Mean absolute error: ', cross_val_score(model, x_data, y_data, scoring=score, cv=5))
+    print('Cross Validation score: ', cross_val_score(model, x_data, y_data, scoring=score, cv=5))
 
 # define a helper function to have evaluation scores of single class models
 def get_evaluation_score_single_class(y_true, y_pred, y_pred_prob):
@@ -515,3 +515,25 @@ def get_evaluation_score_single_class(y_true, y_pred, y_pred_prob):
     
     # AUC score
     print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob))
+
+# define a helper function to have evaluation scores of single class models write in output file
+def get_evaluation_score_single_class_print(y_true, y_pred, y_pred_prob,f):
+    #accuracy
+    print('Accuracy score: ', accuracy_score(y_true, y_pred), file=f)
+    #precision
+    print('Precision score: ', precision_score(y_true, y_pred), file=f)
+    #recall
+    print('Recall score: ', recall_score(y_true, y_pred), file=f)
+    #f1
+    print('F1 score: ', f1_score(y_true, y_pred), file=f)
+    
+    #confusion matrix
+    print("Confusion matrix:",file=f)
+    print(confusion_matrix(y_pred=y_pred, y_true=y_true), file=f)
+    
+    #log loss
+    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob), file=f)
+    
+    # AUC score
+    print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob), file=f)
+
