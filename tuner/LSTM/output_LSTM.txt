@@ -1,0 +1,525 @@
+hypermodel_val_accuracy
+Evaluation score for toxic
+Accuracy score:  0.9655388510443627
+Precision score:  0.8400333263903353
+Recall score:  0.7910945468811299
+F1 score:  0.814829780785938
+Confusion matrix:
+[[141973   2304]
+ [  3195  12099]]
+Logarithmic Loss:  0.09188984722380054
+ROC AUC score:  0.9813445877456392
+
+
+Evaluation score for severe_toxic
+Accuracy score:  0.9905684616879007
+Precision score:  0.6584507042253521
+Recall score:  0.11724137931034483
+F1 score:  0.19904204364023415
+Confusion matrix:
+[[157879     97]
+ [  1408    187]]
+Logarithmic Loss:  0.023201757576024197
+ROC AUC score:  0.9893981415850954
+
+
+Evaluation score for obscene
+Accuracy score:  0.9817260028451285
+Precision score:  0.8351302241066021
+Recall score:  0.8159545508344183
+F1 score:  0.8254310344827587
+Confusion matrix:
+[[149761   1361]
+ [  1555   6894]]
+Logarithmic Loss:  0.049974593421324355
+ROC AUC score:  0.9897147225681323
+
+
+Evaluation score for threat
+Accuracy score:  0.9970044682304429
+Precision score:  0.0
+Recall score:  0.0
+F1 score:  0.0
+Confusion matrix:
+[[159093      0]
+ [   478      0]]
+Logarithmic Loss:  0.012774542361264773
+ROC AUC score:  0.9719200976813461
+
+
+Evaluation score for insult
+Accuracy score:  0.9731216825112332
+Precision score:  0.7337154768108389
+Recall score:  0.7149930176463121
+F1 score:  0.7242332668938467
+Confusion matrix:
+[[149650   2044]
+ [  2245   5632]]
+Logarithmic Loss:  0.06516737121364673
+ROC AUC score:  0.9845224784768668
+
+
+Evaluation score for identity_hate
+Accuracy score:  0.9912076755801493
+Precision score:  0.75
+Recall score:  0.002135231316725979
+F1 score:  0.0042583392476934
+Confusion matrix:
+[[158165      1]
+ [  1402      3]]
+Logarithmic Loss:  0.02694900103897116
+ROC AUC score:  0.977529774902471
+
+
+
+
+hypermodel_accuracy
+Evaluation score for toxic
+Accuracy score:  0.9690106598316737
+Precision score:  0.8604667363288053
+Recall score:  0.8076369818229371
+F1 score:  0.8332152855070997
+Confusion matrix:
+[[142274   2003]
+ [  2942  12352]]
+Logarithmic Loss:  0.08329922350615034
+ROC AUC score:  0.9859345243031628
+
+
+Evaluation score for severe_toxic
+Accuracy score:  0.990474459644923
+Precision score:  0.5386199794026777
+Recall score:  0.32789968652037615
+F1 score:  0.40763834762275913
+Confusion matrix:
+[[157528    448]
+ [  1072    523]]
+Logarithmic Loss:  0.022979409854366
+ROC AUC score:  0.9904961775075394
+
+
+Evaluation score for obscene
+Accuracy score:  0.9830608318554124
+Precision score:  0.8539049026853905
+Recall score:  0.8204521245117765
+F1 score:  0.836844329087946
+Confusion matrix:
+[[149936   1186]
+ [  1517   6932]]
+Logarithmic Loss:  0.04621208548261453
+ROC AUC score:  0.9915505882726993
+
+
+Evaluation score for threat
+Accuracy score:  0.9970044682304429
+Precision score:  0.0
+Recall score:  0.0
+F1 score:  0.0
+Confusion matrix:
+[[159093      0]
+ [   478      0]]
+Logarithmic Loss:  0.010941964530414839
+ROC AUC score:  0.9832247799483195
+
+
+Evaluation score for insult
+Accuracy score:  0.9753087967111819
+Precision score:  0.7333728512151748
+Recall score:  0.7853243620667767
+F1 score:  0.7584600294261893
+Confusion matrix:
+[[149445   2249]
+ [  1691   6186]]
+Logarithmic Loss:  0.06099100892374435
+ROC AUC score:  0.9874336262890038
+
+
+Evaluation score for identity_hate
+Accuracy score:  0.9928997123537485
+Precision score:  0.678477690288714
+Recall score:  0.36797153024911033
+F1 score:  0.4771573604060913
+Confusion matrix:
+[[157921    245]
+ [   888    517]]
+Logarithmic Loss:  0.02162381997363862
+ROC AUC score:  0.986197046096396
+
+
+
+
+model_baseline
+Evaluation score for toxic
+Accuracy score:  0.9709784359313409
+Precision score:  0.9062714318372324
+Recall score:  0.7776252125016346
+F1 score:  0.837034169687159
+Confusion matrix:
+[[143047   1230]
+ [  3401  11893]]
+Logarithmic Loss:  0.0738047418661677
+ROC AUC score:  0.9887934685151724
+
+
+Evaluation score for severe_toxic
+Accuracy score:  0.9900044494300343
+Precision score:  0.0
+Recall score:  0.0
+F1 score:  0.0
+Confusion matrix:
+[[157976      0]
+ [  1595      0]]
+Logarithmic Loss:  0.021086568623996105
+ROC AUC score:  0.9917000606258513
+
+
+Evaluation score for obscene
+Accuracy score:  0.9842139235826058
+Precision score:  0.8862688900468995
+Recall score:  0.8051840454491656
+F1 score:  0.8437829457364341
+Confusion matrix:
+[[150249    873]
+ [  1646   6803]]
+Logarithmic Loss:  0.041943041213817145
+ROC AUC score:  0.9932526417002158
+
+
+Evaluation score for threat
+Accuracy score:  0.9970044682304429
+Precision score:  0.0
+Recall score:  0.0
+F1 score:  0.0
+Confusion matrix:
+[[159093      0]
+ [   478      0]]
+Logarithmic Loss:  0.012278997482405237
+ROC AUC score:  0.9782459350438615
+
+
+Evaluation score for insult
+Accuracy score:  0.9770635015134329
+Precision score:  0.7865199075961408
+Recall score:  0.7347975117430494
+F1 score:  0.7597794696770805
+Confusion matrix:
+[[150123   1571]
+ [  2089   5788]]
+Logarithmic Loss:  0.054540449498704145
+ROC AUC score:  0.9894542504878581
+
+
+Evaluation score for identity_hate
+Accuracy score:  0.9911951419744189
+Precision score:  0.0
+Recall score:  0.0
+F1 score:  0.0
+Confusion matrix:
+[[158166      0]
+ [  1405      0]]
+Logarithmic Loss:  0.027319898359990748
+ROC AUC score:  0.9765173762436987
+
+
+
+
+model_refer
+Evaluation score for toxic
+Accuracy score:  0.9699256130499903
+Precision score:  0.8634254449754138
+Recall score:  0.8151562704328494
+F1 score:  0.8385968452561128
+Confusion matrix:
+[[142305   1972]
+ [  2827  12467]]
+Logarithmic Loss:  0.07997662572440367
+ROC AUC score:  0.9866383844952205
+
+
+Evaluation score for severe_toxic
+Accuracy score:  0.9910886063257108
+Precision score:  0.6493955094991365
+Recall score:  0.23573667711598745
+F1 score:  0.34590616375344985
+Confusion matrix:
+[[157773    203]
+ [  1219    376]]
+Logarithmic Loss:  0.020848124722581123
+ROC AUC score:  0.9912863475313817
+
+
+Evaluation score for obscene
+Accuracy score:  0.9834932412531099
+Precision score:  0.8696757787666879
+Recall score:  0.8095632619244881
+F1 score:  0.838543582199338
+Confusion matrix:
+[[150097   1025]
+ [  1609   6840]]
+Logarithmic Loss:  0.044312964851157634
+ROC AUC score:  0.9921366675707339
+
+
+Evaluation score for threat
+Accuracy score:  0.9970044682304429
+Precision score:  0.0
+Recall score:  0.0
+F1 score:  0.0
+Confusion matrix:
+[[159093      0]
+ [   478      0]]
+Logarithmic Loss:  0.00976138652005301
+ROC AUC score:  0.9878993766099864
+
+
+Evaluation score for insult
+Accuracy score:  0.9762362835352288
+Precision score:  0.771862105683482
+Recall score:  0.7361939824806398
+F1 score:  0.7536062378167641
+Confusion matrix:
+[[149980   1714]
+ [  2078   5799]]
+Logarithmic Loss:  0.057458276377558105
+ROC AUC score:  0.9881362741844308
+
+
+Evaluation score for identity_hate
+Accuracy score:  0.991991025938297
+Precision score:  0.718213058419244
+Recall score:  0.14875444839857652
+F1 score:  0.24646226415094338
+Confusion matrix:
+[[158084     82]
+ [  1196    209]]
+Logarithmic Loss:  0.02060961380749011
+ROC AUC score:  0.9881170681390959
+
+
+
+
+model_CNN
+Evaluation score for toxic
+Accuracy score:  0.9718119207124102
+Precision score:  0.88019439357656
+Recall score:  0.8171178239832614
+F1 score:  0.8474840634748405
+Confusion matrix:
+[[142576   1701]
+ [  2797  12497]]
+Logarithmic Loss:  0.07490862525976788
+ROC AUC score:  0.9876264177736457
+
+
+Evaluation score for severe_toxic
+Accuracy score:  0.9914959485119477
+Precision score:  0.6502525252525253
+Recall score:  0.322884012539185
+F1 score:  0.4315039798910767
+Confusion matrix:
+[[157699    277]
+ [  1080    515]]
+Logarithmic Loss:  0.020245062864555297
+ROC AUC score:  0.9918980133961065
+
+
+Evaluation score for obscene
+Accuracy score:  0.984220190385471
+Precision score:  0.8542587504479752
+Recall score:  0.8463723517576045
+F1 score:  0.8502972651605233
+Confusion matrix:
+[[149902   1220]
+ [  1298   7151]]
+Logarithmic Loss:  0.042259542570865054
+ROC AUC score:  0.9931994885695717
+
+
+Evaluation score for threat
+Accuracy score:  0.9976499489255567
+Precision score:  0.748792270531401
+Recall score:  0.32426778242677823
+F1 score:  0.4525547445255475
+Confusion matrix:
+[[159041     52]
+ [   323    155]]
+Logarithmic Loss:  0.0068234366725552
+ROC AUC score:  0.9949227284154498
+
+
+Evaluation score for insult
+Accuracy score:  0.9787304710755714
+Precision score:  0.8135403552944468
+Recall score:  0.7383521645296433
+F1 score:  0.7741248502595501
+Confusion matrix:
+[[150361   1333]
+ [  2061   5816]]
+Logarithmic Loss:  0.0523689040449958
+ROC AUC score:  0.9899329089908502
+
+
+Evaluation score for identity_hate
+Accuracy score:  0.9939964028551553
+Precision score:  0.7847133757961784
+Recall score:  0.43843416370106764
+F1 score:  0.5625570776255708
+Confusion matrix:
+[[157997    169]
+ [   789    616]]
+Logarithmic Loss:  0.016706782019018113
+ROC AUC score:  0.9909929690968851
+
+
+
+
+model_lstm
+Evaluation score for toxic
+Accuracy score:  0.9765308232698924
+Precision score:  0.8964641263302437
+Recall score:  0.8537334902576174
+F1 score:  0.8745771794098931
+Confusion matrix:
+[[142769   1508]
+ [  2237  13057]]
+Logarithmic Loss:  0.060476167514551864
+ROC AUC score:  0.9923754510795715
+
+
+Evaluation score for severe_toxic
+Accuracy score:  0.9916275513721164
+Precision score:  0.6283448959365708
+Recall score:  0.3974921630094044
+F1 score:  0.4869431643625191
+Confusion matrix:
+[[157601    375]
+ [   961    634]]
+Logarithmic Loss:  0.018680663117783658
+ROC AUC score:  0.993359715129936
+
+
+Evaluation score for obscene
+Accuracy score:  0.9865827750656447
+Precision score:  0.8936595107338992
+Recall score:  0.8474375665759262
+F1 score:  0.8699349978737623
+Confusion matrix:
+[[150270    852]
+ [  1289   7160]]
+Logarithmic Loss:  0.0353056748729057
+ROC AUC score:  0.9954178598425514
+
+
+Evaluation score for threat
+Accuracy score:  0.9973616759937582
+Precision score:  0.7522123893805309
+Recall score:  0.17782426778242677
+F1 score:  0.28764805414551603
+Confusion matrix:
+[[159065     28]
+ [   393     85]]
+Logarithmic Loss:  0.007234499886374545
+ROC AUC score:  0.9929573113297301
+
+
+Evaluation score for insult
+Accuracy score:  0.9816508012107463
+Precision score:  0.833355786070322
+Recall score:  0.7853243620667767
+F1 score:  0.8086274509803921
+Confusion matrix:
+[[150457   1237]
+ [  1691   6186]]
+Logarithmic Loss:  0.045294648487296425
+ROC AUC score:  0.9928547548263036
+
+
+Evaluation score for identity_hate
+Accuracy score:  0.9943598774213359
+Precision score:  0.7156276686592656
+Recall score:  0.59644128113879
+F1 score:  0.6506211180124223
+Confusion matrix:
+[[157833    333]
+ [   567    838]]
+Logarithmic Loss:  0.015155199231175712
+ROC AUC score:  0.9940198308700671
+
+
+
+
+model_gru
+Evaluation score for toxic
+Accuracy score:  0.9803222390033277
+Precision score:  0.9121117591211176
+Recall score:  0.8794298417680136
+F1 score:  0.8954727030625832
+Confusion matrix:
+[[142981   1296]
+ [  1844  13450]]
+Logarithmic Loss:  0.05281737196773272
+ROC AUC score:  0.9940252861075572
+
+
+Evaluation score for severe_toxic
+Accuracy score:  0.9921414292070614
+Precision score:  0.6591970121381886
+Recall score:  0.4426332288401254
+F1 score:  0.5296324081020255
+Confusion matrix:
+[[157611    365]
+ [   889    706]]
+Logarithmic Loss:  0.01808181605746651
+ROC AUC score:  0.9942164898505277
+
+
+Evaluation score for obscene
+Accuracy score:  0.9885756183767728
+Precision score:  0.9222533775172063
+Recall score:  0.8564327139306427
+F1 score:  0.8881251917766186
+Confusion matrix:
+[[150512    610]
+ [  1213   7236]]
+Logarithmic Loss:  0.031600246558054795
+ROC AUC score:  0.9963619077655941
+
+
+Evaluation score for threat
+Accuracy score:  0.9982954296206704
+Precision score:  0.7668393782383419
+Recall score:  0.6192468619246861
+F1 score:  0.6851851851851851
+Confusion matrix:
+[[159003     90]
+ [   182    296]]
+Logarithmic Loss:  0.004906651862247743
+ROC AUC score:  0.9954061171609658
+
+
+Evaluation score for insult
+Accuracy score:  0.9851978116324395
+Precision score:  0.8479495268138801
+Recall score:  0.8531166687825315
+F1 score:  0.8505252499683585
+Confusion matrix:
+[[150489   1205]
+ [  1157   6720]]
+Logarithmic Loss:  0.0392667984223817
+ROC AUC score:  0.9945481796096064
+
+
+Evaluation score for identity_hate
+Accuracy score:  0.9952622970339222
+Precision score:  0.7614826752618856
+Recall score:  0.6725978647686833
+F1 score:  0.7142857142857143
+Confusion matrix:
+[[157870    296]
+ [   460    945]]
+Logarithmic Loss:  0.01312444415710099
+ROC AUC score:  0.9949524223907644
+
+
+
+
