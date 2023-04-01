@@ -35,6 +35,8 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_auc_score
+# for KF validation
+from sklearn.model_selection import KFold
 
 
 '''
@@ -547,3 +549,26 @@ def get_overall_evaluation_score(y_true, y_pred):
     print('Recall score: ', recall_score(y_true, y_pred, average="weighted"))
     #f1
     print('F1 score: ', f1_score(y_true, y_pred, average="weighted"))
+    
+# define a helper function for KFold validation
+def model_evaluation(model, train):
+    features = train.columns[7:]
+    labels = train.columns[:6]
+    kf = KFold(n_splits=5)
+    validation_scores = pd.DataFrame({'accuracy':[], 'precision_weighted':[], 'recall_weighted':[], 
+                                      'f1_weighted':[], 'log_loss':[], 'roc_auc_weighted':[]})
+    for train_index, test_index in kf.split(train):
+        train_split = train.iloc[train_index]
+        test_split = train.iloc[test_index]
+        print('Starting fitting...')
+        model.fit(train_split[features], train_split[labels])
+        predictions = model.predict(test_split[features])
+        predictions_proba = model.predict_proba(test_split[features])
+        scores = [accuracy_score(test_split[labels], predictions), precision_score(test_split[labels], predictions, average="weighted"),
+                  recall_score(test_split[labels], predictions, average="weighted"), 
+                  f1_score(test_split[labels], predictions, average="weighted"),
+                  log_loss(test_split[labels], predictions_proba.toarray()), 
+                  roc_auc_score(test_split[labels], predictions_proba.toarray(), average="weighted")]
+        validation_scores.loc[len(validation_scores)] = scores
+        print(f'Evaluation Scores:\n{scores}\n')
+    return validation_scores   
