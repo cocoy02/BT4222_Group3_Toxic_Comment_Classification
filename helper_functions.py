@@ -540,7 +540,7 @@ def get_evaluation_score_single_class_print(y_true, y_pred, y_pred_prob,f):
     print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob), file=f)
 
 # define a helper function to have scores of overall accuracy, precision, recall and f1
-def get_overall_evaluation_score(y_true, y_pred):
+def get_overall_evaluation_score(y_true, y_pred, y_pred_prob):
     #accuracy
     print('Accuracy score: ', accuracy_score(y_true, y_pred))
     #precision
@@ -549,6 +549,11 @@ def get_overall_evaluation_score(y_true, y_pred):
     print('Recall score: ', recall_score(y_true, y_pred, average="weighted"))
     #f1
     print('F1 score: ', f1_score(y_true, y_pred, average="weighted"))
+    #log loss
+    print('Logarithmic Loss: ', log_loss(y_true, y_pred_prob))
+    
+    # AUC score
+    print('ROC AUC score: ', roc_auc_score(y_true, y_pred_prob))
     
 # define a helper function for KFold validation
 def model_evaluation(model, train):
