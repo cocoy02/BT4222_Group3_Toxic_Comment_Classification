@@ -569,11 +569,14 @@ def model_evaluation(model, train):
         model.fit(train_split[features], train_split[labels])
         predictions = model.predict(test_split[features])
         predictions_proba = model.predict_proba(test_split[features])
+        try:
+            roc_auc = roc_auc_score(test_split[labels], predictions_proba.toarray(), average="weighted")
+        except:
+            roc_auc = 0
         scores = [accuracy_score(test_split[labels], predictions), precision_score(test_split[labels], predictions, average="weighted"),
                   recall_score(test_split[labels], predictions, average="weighted"), 
                   f1_score(test_split[labels], predictions, average="weighted"),
-                  log_loss(test_split[labels], predictions_proba.toarray()), 
-                  roc_auc_score(test_split[labels], predictions_proba.toarray(), average="weighted")]
+                  log_loss(test_split[labels], predictions_proba.toarray()), roc_auc]
         validation_scores.loc[len(validation_scores)] = scores
         print(f'Evaluation Scores:\n{scores}\n')
     return validation_scores   
