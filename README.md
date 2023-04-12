@@ -30,7 +30,6 @@ The following table contains a brief description of the files and folders in thi
 |**Boosting Models Evaluation.ipynb**| AdaBoost, XGBoost, and LightGBM Model Evaluation|
 |**LSTM.ipynb**| Long Short-term Memory Model and Evaluation|
 |**Ensemble.ipynb**| Ensemble on models|
-
 |**tuner**| Dump and output of all models|
 |**performance**| Metrics of performance of each model|
 |**Data**| train and test dataset|
