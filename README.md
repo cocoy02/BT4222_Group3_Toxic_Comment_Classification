@@ -24,10 +24,10 @@ The following table contains a brief description of the files and folders in thi
 | **8_Model Evaulation.ipynb** | Metrics and evaluation of models. |
 | **Logistic Regression & Random Forest.ipynb** | Logistics Regression & Random Forest Model|
 |**LogReg & RandomForest Models Evaluation.ipynb**| Logistics Regression & Random Forest Model Evaluation|
-| **Gradient Boosting & Naive Bayes.ipynb** | Gradient Boosting & Naive Bayes Model|
-|**Gradient Boosting & Naive Bayes Evaluation.ipynb**| Gradient Boosting & Naive Bayes Model Evaluation|
-| **Boosting Models.ipynb** | AdaBoost, XGBoost, and LightGBM Model|
-|**Boosting Models Evaluation.ipynb**| AdaBoost, XGBoost, and LightGBM Model Evaluation|
+| **Gradient Boosting & Naive Bayes.ipynb** | Gradient Boosting (Gradient Boost and XGBoost) & Naive Bayes Model|
+|**Gradient Boosting & Naive Bayes Evaluation.ipynb**| Gradient Boosting (Gradient Boost and XGBoost) & Naive Bayes Model Evaluation|
+| **Boosting Models.ipynb** | AdaBoost & LightGBM Model|
+|**Boosting Models Evaluation.ipynb**| AdaBoost & LightGBM Model Evaluation|
 |**LSTM.ipynb**| Long Short-term Memory Model and Evaluation|
 |**Ensemble.ipynb**| Ensemble on models|
 |**tuner**| Dump and output of all models|
