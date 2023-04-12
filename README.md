@@ -14,14 +14,14 @@ pip install -r requirements.txt
 The following table contains a brief description of the files and folders in this repository.
 | Folder / File | Description |
 | - | - |
-| **1_Cleaning.ipynb** | Data Cleaning, such as expanding contractions, removing URLs. |
-| **2_Preprocessing.ipynb** | Data Proprocessing, such as tokenization, POS tagging and lemmatization.|
-| **3_EDA.ipynb** | Exploratory Data Analysis.|
-| **4_Feature Engineering.ipynb** | Creating new features and evaluation to select appropriate features.  |
+| **1_Cleaning.ipynb** | Data Cleaning, such as expanding contractions, removing URLs |
+| **2_Preprocessing.ipynb** | Data Proprocessing, such as tokenization, POS tagging and lemmatization|
+| **3_EDA.ipynb** | Exploratory Data Analysis|
+| **4_Feature Engineering.ipynb** | Creating new features and evaluation to select appropriate features. |
 | **helper_functions.py** | helper functions including data cleaning, preprocessing and evaluation score for models |
-| **5_Embedding.ipynb** | Word Embedding and Sentence Embedding method. |
-| **6_Processing Test.ipynb** | Feature engineering on test data.|
-| **7_Oversampling.ipynb** | Oversampling on minority classes. |
+| **5_Embedding.ipynb** | Word Embedding and Sentence Embedding method |
+| **6_Processing Test.ipynb** | Feature engineering on test data|
+| **7_Oversampling.ipynb** | Oversampling on minority classes|
 | **Logistic Regression & Random Forest.ipynb** | Logistics Regression & Random Forest Model|
 | **LogReg & RandomForest Models Evaluation.ipynb**| Logistics Regression & Random Forest Model Evaluation|
 | **LightGBM & Naive Bayes.ipynb** | LightGBM & Naive Bayes Model|
@@ -30,7 +30,7 @@ The following table contains a brief description of the files and folders in thi
 | **Boosting Models Evaluation.ipynb**| AdaBoost & XGBoost Model Evaluation|
 | **LSTM.ipynb**| Long Short-term Memory Model and Evaluation|
 | **Ensemble.ipynb**| Ensemble on models|
-| **8_Model Evaluation.ipynb** | Metrics and evaluation of models. |
+| **8_Model Evaluation.ipynb** | Metrics and evaluation of models |
 | **tuner**| Dump and output of all models|
 | **performance**| Metrics of performance of each model|
 | **Data**| train and test dataset|
