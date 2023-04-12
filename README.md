@@ -22,4 +22,5 @@ The following table contains a brief description of the files and folders in thi
 | **6_Processing Test.ipynb** | Feature engineering on test data.|
 | **7_Oversampling.ipynb** | Oversampling on minority classes. |
 | **8_Model Evaulation.ipynb** | Metrics and evaluation of models. |
-| **Logistic Regression & Random Forest.ipynb** **LogReg & RandomForest Models Evaluation.ipynb**| Logistics Regression & Random Forest Model and Evaluation|
+| **Logistic Regression & Random Forest.ipynb** 
+**LogReg & RandomForest Models Evaluation.ipynb**| Logistics Regression & Random Forest Model and Evaluation|
