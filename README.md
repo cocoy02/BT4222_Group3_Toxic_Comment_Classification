@@ -21,7 +21,7 @@ The following table contains a brief description of the files and folders in thi
 | **2_Preprocessing.ipynb** | Data Proprocessing, such as tokenization, POS tagging and lemmatization|
 | **3_EDA.ipynb** | Exploratory Data Analysis|
 | **4_Feature Engineering.ipynb** | Creating new features and evaluation to select appropriate features |
-| **helper_functions.py** | helper functions including data cleaning, preprocessing and evaluation score for models |
+| **helper_functions.py** | Helper functions including data cleaning, preprocessing and evaluation score for models |
 | **5_Embedding.ipynb** | Word Embedding and Sentence Embedding method |
 | **6_Processing Test.ipynb** | Feature engineering on test data|
 | **7_Oversampling.ipynb** | Oversampling on minority classes|
@@ -36,7 +36,7 @@ The following table contains a brief description of the files and folders in thi
 | **8_Model Evaluation.ipynb** | Metrics and evaluation of models |
 | **tuner**| Dump and output of all models|
 | **performance**| Metrics of performance of each model|
-| **Data**| train and test dataset|
+| **Data**| Train and test dataset|
 | **comparision**| Comparison between best model and Prospective API|
 | **prediction**| Predictions using best model and Prospective API|
 
