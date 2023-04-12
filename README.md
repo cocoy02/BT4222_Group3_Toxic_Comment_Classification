@@ -3,6 +3,9 @@
 ## Motivation
 The widespread usage of social networks has resulted in a vast amount of information being produced through online communication among users. 510,000 comments are posted on Facebook every minute and around 6,000 tweets are posted on Twitter each second. While active online interaction contributes greatly to improving the quality of human life, it also poses a serious threat due to the potential of toxicity. People may tend to use offensive language termed as toxic comments to express their intense emotions. These toxic comments may be threatening, obscene, insulting or identity-based hatred, which can lead to personal attacks, online harassment, and bullying, making it an unfortunate aspect of online communication. 
 
+To address the above issues, our group will therefore aim to develop a multi-label classifier to identify toxic comments and categorise different types of toxicity into the following categories: toxic, severe-toxic, threat, obscene, insult, and identity-hate.
+
+
 
 ## Getting Started
 This project mainly uses Jupyter Notebook. Upon cloning this repository into your local machine, run the following command to install all relevant packages.
